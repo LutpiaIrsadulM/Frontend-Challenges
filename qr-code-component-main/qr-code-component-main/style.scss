@@ -1,0 +1,35 @@
+$white: hsl(0, 0%, 100%);
+$lGray: hsl(212, 45%, 89%);
+$gBlue: hsl(220, 15%, 55%);
+$dBlue: hsl(218, 44%, 22%);
+
+
+body {
+    background-color: $lGray;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    width: 300px;
+    background-color: $white;
+    border-radius: 15px;
+    padding: 10px 0 10px 0;
+    text-align: center;
+    box-shadow: 0 0 15px -6px $dBlue;
+
+    img {
+        width: 280px;
+        border-radius: 15px;
+    }
+
+    strong {
+        font-size: 20px;
+        // padding: 20px;
+    }
+
+    span {
+        color: $gBlue;
+    }
+}
