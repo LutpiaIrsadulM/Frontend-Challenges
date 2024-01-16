@@ -3,6 +3,7 @@ body {
   height: 100vh;
   display: grid;
   place-items: center;
+  font-family: "Outfit", sans-serif;
 }
 
 .container {
@@ -16,6 +17,9 @@ body {
 .container img {
   width: 280px;
   border-radius: 15px;
+}
+.container p {
+  font-size: 15px;
 }
 .container strong {
   font-size: 20px;
