@@ -2,6 +2,8 @@ $primaryColor: hsl(47, 88%, 63%);
 $nWhite: hsl(0, 0%, 100%);
 $nGrey: hsl(0, 0%, 50%);
 $nBlack: hsl(0, 0%, 7%);
+$mobile: 375px;
+$desktop: 1440px;
 
 @font-face {
     font-family: 'Figtree';
@@ -20,6 +22,10 @@ body {
     font-family: 'Figtree', sans-serif;
     p {
         font-size: 16px;
+
+        @media (max-width: $mobile) {
+            font-size: 80%;
+        }
     }
 }
 
@@ -39,15 +45,27 @@ main {
     border: 1px solid $nBlack;
     box-shadow: 10px 8px 0 1px $nBlack;
 
+    @media (max-width: $mobile) {
+        width: 320px;
+    }
+
     .illustration {
         border-radius: 15px;
-        width: 300px;
+        width: 320px;
         margin-top: 20px;
+
+        @media (max-width: $mobile) {
+            width: 300px;
+        }
     }
 
     article {
-        width: 300px;
+        width: 320px;
         margin-top: 20px;
+
+        @media (max-width: $mobile) {
+            width: 300px;
+        }
 
         header {
             .label {
@@ -86,8 +104,6 @@ main {
             }
         }
     }
-
-
 
     
 }

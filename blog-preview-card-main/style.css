@@ -9,6 +9,11 @@ body {
 body p {
   font-size: 16px;
 }
+@media (max-width: 375px) {
+  body p {
+    font-size: 80%;
+  }
+}
 
 main {
   height: 100vh;
@@ -26,14 +31,29 @@ main {
   border: 1px solid hsl(0, 0%, 7%);
   box-shadow: 10px 8px 0 1px hsl(0, 0%, 7%);
 }
+@media (max-width: 375px) {
+  .card {
+    width: 320px;
+  }
+}
 .card .illustration {
   border-radius: 15px;
-  width: 300px;
+  width: 320px;
   margin-top: 20px;
 }
+@media (max-width: 375px) {
+  .card .illustration {
+    width: 300px;
+  }
+}
 .card article {
-  width: 300px;
+  width: 320px;
   margin-top: 20px;
+}
+@media (max-width: 375px) {
+  .card article {
+    width: 300px;
+  }
 }
 .card article header .label {
   padding: 8px;
