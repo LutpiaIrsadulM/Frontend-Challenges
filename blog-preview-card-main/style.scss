@@ -60,6 +60,15 @@ main {
             .parap {
                 color: $nGrey;
             }
+
+            a {
+                color: $nBlack;
+                text-decoration: none;
+            }
+
+            a:active {
+                color: $primaryColor;
+            }
             
         }
 

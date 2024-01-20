@@ -43,6 +43,13 @@ main {
 .card article header .parap {
   color: hsl(0, 0%, 50%);
 }
+.card article header a {
+  color: hsl(0, 0%, 7%);
+  text-decoration: none;
+}
+.card article header a:active {
+  color: hsl(47, 88%, 63%);
+}
 .card article address {
   display: flex;
   align-items: center;
