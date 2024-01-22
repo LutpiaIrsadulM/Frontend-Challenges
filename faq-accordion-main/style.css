@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "WorkSans";
+  src: url("assets/fonts/WorkSans-VariableFont_wght.ttf") format("truetype"), url("assets/fonts/WorkSans-Italic-VariableFont_wght.ttf") format("truetype"), url("assets/fonts/static/WorkSans-Bold.ttf") format("truetype"), url("assets/fonts/static/WorkSans-SemiBold.ttf") format("truetype"), url("assets/fonts/static/WorkSans-Regular.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-family: "WorkSans", sans-serif;
+  font-size: 16px;
+  background-image: url("assets/images/background-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-color: hsl(275, 100%, 97%);
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+.container .card {
+  background-color: hsl(0, 0%, 100%);
+  width: 540px;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 0 20px 0 hsl(292, 42%, 14%);
+}
+.container .card article a {
+  color: black;
+  text-decoration: none;
+}
+.container .card article a:hover {
+  color: blue;
+}
+.container .card article p {
+  margin-top: 20px;
+  color: hsl(292, 16%, 49%);
+}
+.container .card article header {
+  display: flex;
+  justify-items: center;
+}
+.container .card article header h1 {
+  font-size: 50px;
+  font-weight: 700;
+}
+.container .card article header img {
+  float: left;
+  margin-right: 20px;
+}
+.container .card article section {
+  margin-top: 30px;
+}
+.container .card article section a {
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+}/*# sourceMappingURL=style.css.map */
