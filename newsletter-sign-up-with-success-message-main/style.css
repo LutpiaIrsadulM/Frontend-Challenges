@@ -8,11 +8,26 @@
   font-family: "Roboto";
   src: url("assets/fonts/Roboto-Regular.ttf") format("truetype"), url("assets/fonts/Roboto-Bold.ttf") format("truetype");
 }
+.card .success h1, .card .form h1 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+@media (max-width: 375px) {
+  .card .success h1, .card .form h1 {
+    font-size: 36px;
+  }
+}
+@media (min-width: 376px) {
+  .card .success h1, .card .form h1 {
+    font-size: 56px;
+  }
+}
+
 body {
   background-color: hsl(235, 18%, 26%);
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  height: 100vh;
+  height: 100dvh;
 }
 
 .container {
@@ -23,25 +38,58 @@ body {
   place-items: center;
 }
 
+@media (max-width: 375px) {
+  .wForm {
+    width: 375px;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+@media (min-width: 376px) {
+  .wForm {
+    width: 950px;
+    height: 100dvh;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .wSuccess {
+    width: 375px;
+    height: 100dvh;
+  }
+}
+
 .card {
   background-color: hsl(0, 0%, 100%);
-  border-radius: 25px;
   display: flex;
-  padding: 20px;
-  width: -moz-fit-content;
-  width: fit-content;
+}
+@media (max-width: 375px) {
+  .card {
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 376px) {
+  .card {
+    border-radius: 25px;
+    flex-wrap: wrap-reverse;
+    overflow: hidden;
+  }
 }
 .card .form {
-  width: 400px;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 50px;
 }
-.card .form h1 {
-  font-size: 56px;
-  font-weight: 700;
-  margin-bottom: 20px;
+@media (max-width: 375px) {
+  .card .form {
+    margin: 20px;
+  }
+}
+@media (min-width: 376px) {
+  .card .form {
+    margin: 50px;
+  }
 }
 .card .form p:not(div.list p) {
   margin-bottom: 20px;
@@ -74,7 +122,7 @@ body {
   margin-top: 20px;
 }
 .card .form form input[type=submit]:active {
-  background-color: hsl(4, 100%, 67%);
+  background-image: linear-gradient(to right, #FF512F 10%, #f07a19 51%);
 }
 .card .form form .label {
   display: flex;
@@ -84,13 +132,25 @@ body {
   color: hsl(4, 100%, 67%);
 }
 .card .success {
-  width: 360px;
-  margin: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
-.card .success h1 {
-  font-size: 56px;
-  font-weight: 700;
-  margin-top: 20px;
+.card .success img {
+  width: 64px;
+  margin-bottom: 20px;
+}
+@media (max-width: 375px) {
+  .card .success {
+    height: 100dvh;
+    margin: 0 30px;
+  }
+}
+@media (min-width: 376px) {
+  .card .success {
+    width: 375px;
+    margin: 30px;
+  }
 }
 .card .success p {
   margin: 20px 0;
@@ -103,4 +163,7 @@ body {
   color: hsl(0, 0%, 100%);
   margin-top: 20px;
   font-weight: 700;
+}
+.card .success button:active {
+  background-image: linear-gradient(to right, #FF512F 10%, #f07a19 51%);
 }/*# sourceMappingURL=style.css.map */
