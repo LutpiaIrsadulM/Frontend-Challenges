@@ -48,7 +48,6 @@ body {
 @media (min-width: 376px) {
   .wForm {
     width: 950px;
-    height: 100dvh;
     padding: 20px;
   }
 }
