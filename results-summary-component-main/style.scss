@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+// Primary
+
+$Lightred: hsl(0, 100%, 67%);
+$Orangeyyellow: hsl(39, 100%, 56%);
+$Greenteal: hsl(166, 100%, 37%);
+$Cobaltblue: hsl(234, 85%, 45%);
+
+// Gradients
+//--background
+$Lightslateblue: hsl(252, 100%, 67%);
+$Lightroyalblue: hsl(241, 81%, 54%);
+// --circle
+$Violetblue: hsla(256, 72%, 46%, 1);
+$Persianblue: hsla(241, 72%, 46%, 0);
+//Neutral
+
+$White: hsl(0, 0%, 100%);
+$Paleblue: hsl(221, 100%, 96%);
+$Lightlavender: hsl(241, 100%, 89%);
+$Darkgrayblue: hsl(224, 30%, 27%);
+
+@font-face {
+    font-family: "Hanken-Grotesk";
+    src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf) format("truetype");
+}
+
+body {
+    font-family: "Hanken-Grotesk";
+    height: 100dvh;
+    background-color: $Paleblue;
+    font-size: 18px;
+}
+.container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.card {
+    background-color: $White;
+    display: flex;
+    border: 1px solid black;
+    width: 750px;
+    border-radius: 25px;
+    .result {
+        background-color: $Lightroyalblue;
+        color: $White;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 50%;
+        padding: 30px;
+
+        .circle {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background-color: $Lightslateblue;
+            padding: 30px 0;
+            text-align: center;
+            h1 {
+               font-size: 56px; 
+            }
+        }
+        h3:last-of-type {
+            font-weight: 800;
+            font-size: 28px;
+        }
+        p {
+            text-align: center;
+            width: 16rem;
+        }
+    }
+
+    .summary {
+        width: 50%;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .lists {
+            .items {
+                display: flex;
+                justify-content: space-between;
+                padding: 0 10px;
+                align-items: center;
+                margin: 1rem 0;
+                background-color: $Paleblue;
+                border-radius: 10px;
+                height: 3rem;
+
+                div {
+                    display: flex;
+                    p {
+                        margin-left: 1rem;
+                    }
+                }
+            }
+            #Reaction {
+                div {
+                    color: $Lightred;
+                }
+            }
+            #Memory {
+                div {
+                    color: $Orangeyyellow;
+                }
+            }
+            #Verbal {
+                div {
+                    color: $Greenteal;
+                }
+            }
+            #Visual {
+                div {
+                    color: $Cobaltblue;
+                }
+            }
+        }
+        button {
+            width: 100%;
+            background-color: $Darkgrayblue;
+            color: $White;
+            border-radius: 25px;
+            height: 3rem;
+        }
+    }
+}
+
+.attribution {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+

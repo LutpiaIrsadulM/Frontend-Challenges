@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Hanken-Grotesk";
+  src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf) format("truetype");
+}
+body {
+  font-family: "Hanken-Grotesk";
+  height: 100dvh;
+  background-color: hsl(221, 100%, 96%);
+  font-size: 18px;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  border: 1px solid black;
+  width: 750px;
+  border-radius: 25px;
+}
+.card .result {
+  background-color: hsl(241, 81%, 54%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  padding: 30px;
+}
+.card .result .circle {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background-color: hsl(252, 100%, 67%);
+  padding: 30px 0;
+  text-align: center;
+}
+.card .result .circle h1 {
+  font-size: 56px;
+}
+.card .result h3:last-of-type {
+  font-weight: 800;
+  font-size: 28px;
+}
+.card .result p {
+  text-align: center;
+  width: 16rem;
+}
+.card .summary {
+  width: 50%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.card .summary .lists .items {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  align-items: center;
+  margin: 1rem 0;
+  background-color: hsl(221, 100%, 96%);
+  border-radius: 10px;
+  height: 3rem;
+}
+.card .summary .lists .items div {
+  display: flex;
+}
+.card .summary .lists .items div p {
+  margin-left: 1rem;
+}
+.card .summary .lists #Reaction div {
+  color: hsl(0, 100%, 67%);
+}
+.card .summary .lists #Memory div {
+  color: hsl(39, 100%, 56%);
+}
+.card .summary .lists #Verbal div {
+  color: hsl(166, 100%, 37%);
+}
+.card .summary .lists #Visual div {
+  color: hsl(234, 85%, 45%);
+}
+.card .summary button {
+  width: 100%;
+  background-color: hsl(224, 30%, 27%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 25px;
+  height: 3rem;
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */
