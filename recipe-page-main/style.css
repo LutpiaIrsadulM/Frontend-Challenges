@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Young-Serif";
+  src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Outfit";
+  src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format("truetype");
+}
+body {
+  height: 100dvh;
+  background-color: hsl(30, 54%, 90%);
+  display: grid;
+  place-items: center;
+  font-family: "Outfit";
+  color: hsl(30, 10%, 34%);
+}
+
+h1, h2 {
+  font-family: "Young-Serif";
+}
+
+.container {
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 375px) {
+  .container {
+    width: 100%;
+  }
+}
+@media (min-width: 376px) {
+  .container {
+    padding: 30px 0;
+    width: 780px;
+    margin: 80px 0;
+    border-radius: 25px;
+  }
+}
+.container .items {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+@media (max-width: 375px) {
+  .container .items {
+    width: 375px;
+  }
+  .container .items section, .container .items header {
+    padding: 20px;
+  }
+}
+@media (min-width: 376px) {
+  .container .items {
+    width: 700px;
+  }
+}
+.container .items header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 20px;
+}
+.container .items .image img {
+  width: 100%;
+}
+@media (min-width: 376px) {
+  .container .items .image img {
+    border-radius: 25px;
+  }
+}
+@media (min-width: 376px) {
+  .container .items section {
+    width: 100%;
+  }
+}
+.container .items section h3 {
+  color: hsl(332, 51%, 32%);
+  text-indent: 2rem;
+  margin-bottom: 20px;
+}
+.container .items section h2 {
+  font-weight: 600;
+  color: hsl(24, 5%, 18%);
+  margin-bottom: 20px;
+  color: hsl(30, 10%, 34%);
+}
+.container .items section ol li, .container .items section ul li {
+  padding-left: 1rem;
+}
+.container .items section table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.container .items section table td {
+  padding: 10px;
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+.container .items section p {
+  margin-bottom: 20px;
+}
+.container .items .section-1 {
+  background-color: hsl(330, 100%, 98%);
+  border-radius: 25px;
+}
+.container .items .section-1 ul {
+  padding-left: 3.5rem;
+}
+.container .items .section-2 ol, .container .items .section-2 ul, .container .items .section-3 ol, .container .items .section-3 ul {
+  padding-left: 1.5rem;
+}
+.container .items hr {
+  border: 1px solid hsl(30, 18%, 87%);
+}
+@media (max-width: 375px) {
+  .container .items hr {
+    width: 90%;
+    margin: auto;
+  }
+}/*# sourceMappingURL=style.css.map */

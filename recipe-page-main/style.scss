@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+$Nutmeg: hsl(14, 45%, 36%);
+$DarkRaspberry: hsl(332, 51%, 32%);
+$White:hsl(0, 0%, 100%);
+$RoseWhite: hsl(330, 100%, 98%);
+$Eggshell: hsl(30, 54%, 90%);
+$LightGrey: hsl(30, 18%, 87%);
+$WengeBrown: hsl(30, 10%, 34%);
+$DarkCharcoal: hsl(24, 5%, 18%);
+$mobile: 375px;
+@font-face {
+    font-family: "Young-Serif";
+    src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format("truetype");
+}
+
+body {
+    height: 100dvh;
+    background-color: $Eggshell;
+    display: grid;
+    place-items: center;
+    font-family: "Outfit";
+    color: $WengeBrown;
+}
+h1, h2 {
+    font-family: "Young-Serif";
+}
+.container {
+    background-color: $White;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (max-width: $mobile) {
+        width: 100%;
+    }
+    @media (min-width: ($mobile+1)) {
+        padding: 30px 0;
+        width: 780px;
+        margin: 80px 0;
+        border-radius: 25px;
+    }
+    .items {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        @media (max-width: $mobile) {
+            width: 375px;
+            section, header {
+                padding: 20px;
+            }
+        }
+        @media (min-width: ($mobile+1)) {
+            width: 700px;
+        }
+        header {
+            h1 {
+                font-size: 36px;
+                font-weight: 700;
+                color: black;
+                margin-bottom: 20px;
+            }
+        }
+        .image {
+            img {
+                width: 100%;
+                @media (min-width: ($mobile+1)) {
+                    border-radius: 25px;
+                }
+            }
+        }
+        section {
+            @media (min-width: ($mobile+1)) {
+                width: 100%;
+            }
+            h3 {
+                color: $DarkRaspberry;
+                text-indent: 2rem;
+                margin-bottom: 20px;
+
+            }
+            h2 {
+                font-weight: 600;
+                color: $DarkCharcoal;
+                margin-bottom: 20px;
+                color: $WengeBrown;
+            }
+            ol, ul {
+
+                li {
+
+                    padding-left: 1rem;
+                }
+            }
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                td {
+                    padding: 10px;
+                    border-bottom: 1px solid $LightGrey;
+                }
+            }
+            p {
+                margin-bottom: 20px;
+            }
+        }
+        .section-1{
+            ul {
+                padding-left: 3.5rem;
+            }
+            background-color: $RoseWhite; 
+            border-radius: 25px;
+        }
+        .section-2, .section-3 {
+            ol, ul {
+                padding-left: 1.5rem;
+            }
+        }
+        hr {
+            border: 1px solid $LightGrey;
+            @media (max-width: $mobile) {
+                width: 90%;
+                margin: auto;
+            }
+        }
+    }
+}
