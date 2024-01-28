@@ -27,6 +27,8 @@ $Paleblue: hsl(221, 100%, 96%);
 $Lightlavender: hsl(241, 100%, 89%);
 $Darkgrayblue: hsl(224, 30%, 27%);
 
+$mobile: 375px;
+
 @font-face {
     font-family: "Hanken-Grotesk";
     src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf) format("truetype");
@@ -47,30 +49,45 @@ body {
 .card {
     background-color: $White;
     display: flex;
-    width: 750px;
+    justify-content: center;
+    flex-wrap: wrap;
+    // width: 750px;
     border-radius: 25px;
     box-shadow: 2px 2px 12px 0 $Lightlavender;
     .result {
         background-color: $Lightroyalblue;
         color: $White;
-        border-radius: 25px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        width: 50%;
+        gap: 1rem;
+        width: 375px;
         padding: 30px;
+        border-radius: 25px;
+        @media (max-width: $mobile) {
+            border-radius: 0 0 25px 25px;
+        }
 
         .circle {
             width: 160px;
             height: 160px;
             border-radius: 50%;
             background: linear-gradient($Violetblue 0%, $Violetblue 35%, $Persianblue 100%);
-            padding: 30px 0;
             text-align: center;
+            padding: 30px 0;
             h1 {
-               font-size: 56px; 
+                font-size: 56px; 
             }
+            @media (max-width: $mobile) {
+                width: 120px;
+                height: 120px;
+                padding: 20px;
+                h1 {
+                    font-size: 48px; 
+                 }
+            }
+            
         }
         h3:last-of-type {
             font-weight: 800;
@@ -82,11 +99,15 @@ body {
         p {
             text-align: center;
             width: 16rem;
+            @media (max-width: $mobile) {
+                width: 18rem;
+            }
         }
     }
 
     .summary {
-        width: 50%;
+        width: 375px;
+        // width: 50%;
         padding: 30px;
         display: flex;
         flex-direction: column;
