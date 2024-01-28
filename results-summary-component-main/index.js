@@ -11,15 +11,17 @@ fetch('./data.json')
         let score = document.createElement('p');
         let para = document.createElement('p');
         let strong = document.createElement('strong');
+        let strong2 = document.createElement('strong');
 
         icon.src = json[i].icon;
         listItem.className = "items";
         category.innerHTML = json[i].category;
-        let strongText = document.createTextNode(json[i].score);
-        strong.appendChild(strongText);
+        strong.innerHTML = json[i].score
+        strong2.innerHTML = ' / 100'
+        strong2.style.color = 'hsla(220, 100%, 1%, 0.486)';
         score.appendChild(strong);
-        let scoreText = document.createTextNode(' / 100')
-        score.appendChild(scoreText);
+        score.appendChild(strong2);
+        
 
         listItem.id = json[i].category;
         newDiv.appendChild(icon);
