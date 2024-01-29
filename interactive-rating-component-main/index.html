@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <!-- Rating state start -->
+  <main class="rating-container">
+    <div class="card">
+      <div class="images"><img src="images/icon-star.svg" alt=""></div>
+      <header>
+        <h1>How did we do?</h1>
+        <p>Please let us know how we did with your support request. All feedback is appreciated 
+          to help us improve our offering!</p>
+      </header>
+      <div class="rating-lists">
+        <label for="one" class="input-container"  onmouseover="hoverSelect(0)" onmouseout="changeBack(0)">
+          <input type="radio" name="rating" id="one" value="1" onclick="changeCurrent(0)">
+          <span class="rating-items" id="span-one">1</span>
+        </label>
+        <label for="two" class="input-container"  onmouseover="hoverSelect(1)" onmouseout="changeBack(1)">
+          <input type="radio" name="rating" id="two" value="2" onclick="changeCurrent(1)">
+          <span class="rating-items" id="span-two">2</span>
+        </label>
+        <label for="three" class="input-container" onmouseover="hoverSelect(2)" onmouseout="changeBack(2)">
+          <input type="radio" name="rating" id="three" value="3" onclick="changeCurrent(2)">
+          <span class="rating-items" id="span-three">3</span>
+        </label>
+        <label for="four" class="input-container" onmouseover="hoverSelect(3)" onmouseout="changeBack(3)">
+          <input type="radio" name="rating" id="four" value="4" onclick="changeCurrent(3)">
+          <span class="rating-items" id="span-four">4</span>
+        </label>
+        <label for="five" class="input-container" onmouseover="hoverSelect(4)" onmouseout="changeBack(4)">
+          <input type="radio" name="rating" id="five" value="5" onclick="changeCurrent(4)">
+          <span class="rating-items" id="span-five">5</span>
+        </label>
+      </div>
+      <button type="submit" onclick="submit()">SUBMIT</button>
+    </div>
+
+  </div>
+</main>
+
+<main class="success-container">
+  <div class="card">
+    <div class="images illustration"><img src="images/illustration-thank-you.svg" alt=""></div>
+    <span id="selected-rating"></span>
+    <header>
+      <h1>Thank you!</h1>
+      <p>We appreciate you taking the time to give a rating. If you ever need more support, 
+        don’t hesitate to get in touch!</p>
+    </header>
+</main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
