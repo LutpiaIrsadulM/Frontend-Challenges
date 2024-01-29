@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$Red: hsl(0, 100%, 74%);
+$Green: hsl(154, 59%, 51%);
+$Blue: hsl(248, 32%, 49%);
+$DarkBlue: hsl(249, 10%, 26%); 
+$GrayishBlue: hsl(246, 25%, 77%);
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-color: $Red;
+    height: 100dvh;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    header {
+        width: 32rem;
+        color: white;
+        h1 {
+            font-size: 49px;
+            font-weight: 700px;
+            line-height: 3rem;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+main {
+    height: 100%;
+    background-image: url(images/bg-intro-desktop.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container {
+        display: flex;
+        // width: 760px;
+        gap: 3rem;
+    }
+    .signup {
+        .card {
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 2rem 0;
+            box-shadow: 0px 8px 2px 0px rgba(0, 0, 0, 0.37);
+        }
+        .offer {
+            background-color: $Blue;
+            color: white;
+            text-align: center;
+        }
+        .form-container {
+            background-color: white;
+            padding: 2rem;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 375px;
+
+            label{
+                text-align: end;
+            }
+            span {
+                color: $Red;
+            }
+
+            input, button {
+                padding: 16px;
+                border-radius: 5px;
+                border: 1px solid $GrayishBlue;
+                font-weight: 600;
+            }
+            input {
+                width: 100%;
+                background: url(images/icon-error.svg) no-repeat;
+                background-position: calc(100% - 10px);
+            }
+            button {
+                background-color: $Green;
+                color: white;
+                box-shadow: 0px -2px 5px -2px $DarkBlue inset;
+                border: none;
+            }
+            .term {
+                text-align: center;
+                p {
+                    font-size: 10px;
+                    color: $GrayishBlue;
+                    strong{
+                        color: rgba(0, 0, 0, 0.37);
+                    }
+                }
+            }
+        }
+    }
+}

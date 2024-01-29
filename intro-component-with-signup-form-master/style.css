@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  background-color: hsl(0, 100%, 74%);
+  height: 100dvh;
+}
+
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.intro header {
+  width: 32rem;
+  color: white;
+}
+.intro header h1 {
+  font-size: 49px;
+  font-weight: 700px;
+  line-height: 3rem;
+  margin-bottom: 30px;
+}
+
+main {
+  height: 100%;
+  background-image: url(images/bg-intro-desktop.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .container {
+  display: flex;
+  gap: 3rem;
+}
+main .signup .card {
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 2rem 0;
+  box-shadow: 0px 8px 2px 0px rgba(0, 0, 0, 0.37);
+}
+main .signup .offer {
+  background-color: hsl(248, 32%, 49%);
+  color: white;
+  text-align: center;
+}
+main .signup .form-container {
+  background-color: white;
+  padding: 2rem;
+}
+main .signup form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 375px;
+}
+main .signup form label {
+  text-align: end;
+}
+main .signup form span {
+  color: hsl(0, 100%, 74%);
+}
+main .signup form input, main .signup form button {
+  padding: 16px;
+  border-radius: 5px;
+  border: 1px solid hsl(246, 25%, 77%);
+  font-weight: 600;
+}
+main .signup form input {
+  width: 100%;
+  background: url(images/icon-error.svg) no-repeat;
+  background-position: calc(100% - 10px);
+}
+main .signup form button {
+  background-color: hsl(154, 59%, 51%);
+  color: white;
+  box-shadow: 0px -2px 5px -2px hsl(249, 10%, 26%) inset;
+  border: none;
+}
+main .signup form .term {
+  text-align: center;
+}
+main .signup form .term p {
+  font-size: 10px;
+  color: hsl(246, 25%, 77%);
+}
+main .signup form .term p strong {
+  color: rgba(0, 0, 0, 0.37);
+}/*# sourceMappingURL=style.css.map */
