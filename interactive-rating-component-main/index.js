@@ -89,7 +89,21 @@ function checkData(v){
 function submit(){
     let succ = document.querySelector('.success-container');
     let rat = document.querySelector('.rating-container');
-    succ.style.display = 'block';
-    rat.style.display = 'none';
+    let span = document.getElementById('selected-rating');
+    let input = document.querySelectorAll('input');
+    let rating;
+
+    for(let i = 0; i < input.length; i++){
+        if(!input[i].checked && i === 4){
+            alert('Select the rating!');
+        }else if(input[i].checked) {
+            rating = input[i].value;
+            span.innerText = "You selected " + rating + " out of 5";
+            succ.style.display = 'block';
+            rat.style.display = 'none';
+            break;
+        }
+    }
+    
 
 }

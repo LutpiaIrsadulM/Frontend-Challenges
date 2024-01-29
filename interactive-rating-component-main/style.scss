@@ -45,16 +45,18 @@ main {
         color: $LightGrey;
     }
     .images {
-        width: 3rem;
-        height: 3rem;
-        border-radius: 50%;
-        background-color: $MediumGrey;
         padding-top: 15px;
         img {
             display: block;
             margin: auto;
             // width: 50%;
         }
+    }
+    .container-illu{
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background-color: $MediumGrey;
     }
     button {
         background-color: $Orange;
@@ -95,6 +97,23 @@ main {
 
 .success-container {
     display: none;
+    .card {
+        // display: flex;
+        text-align: center;
+        span{
+            padding: 8px;
+            width: 200px;
+            margin: auto;
+            color: $Orange;
+            background-color: $MediumGrey;
+            border-radius: 24px;
+        }
+        .illustration{
+            border: 1px solid white;
+            width: 100%;
+            height: 140px;
+        }
+    }
 }
 
 .attribution {
