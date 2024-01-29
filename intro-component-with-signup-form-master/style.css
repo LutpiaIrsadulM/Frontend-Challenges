@@ -16,10 +16,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid white;
 }
 .intro header {
   width: 32rem;
   color: white;
+}
+@media (max-width: 375px) {
+  .intro header {
+    text-align: center;
+    width: 23rem;
+  }
 }
 .intro header h1 {
   font-size: 49px;
@@ -27,69 +34,106 @@ body {
   line-height: 3rem;
   margin-bottom: 30px;
 }
+@media (max-width: 375px) {
+  .intro header h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+}
 
 main {
-  height: 100%;
   background-image: url(images/bg-intro-desktop.png);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
+  height: 100%;
 }
 main .container {
+  border: 1px solid yellow;
+  padding: 1rem;
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 3rem;
+  overflow: scroll;
+  height: 100%;
 }
-main .signup .card {
+@media (max-width: 375px) {
+  main .container {
+    padding: 3rem 0;
+  }
+}
+@media (max-width: 375px) {
+  main .container {
+    display: grid;
+    grid-template-columns: auto;
+    place-items: center;
+  }
+}
+
+.signup {
+  border: 1px solid black;
+}
+.signup .card {
   border-radius: 10px;
   padding: 1rem;
   margin: 2rem 0;
   box-shadow: 0px 8px 2px 0px rgba(0, 0, 0, 0.37);
 }
-main .signup .offer {
+.signup .offer {
   background-color: hsl(248, 32%, 49%);
   color: white;
   text-align: center;
 }
-main .signup .form-container {
+.signup .form-container {
   background-color: white;
   padding: 2rem;
 }
-main .signup form {
+@media (max-width: 375px) {
+  .signup .form-container {
+    padding: 1rem;
+  }
+}
+.signup form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   width: 375px;
 }
-main .signup form label {
+@media (max-width: 375px) {
+  .signup form {
+    width: 20rem;
+  }
+}
+.signup form label {
   text-align: end;
 }
-main .signup form span {
+.signup form span {
   color: hsl(0, 100%, 74%);
 }
-main .signup form input, main .signup form button {
+.signup form input, .signup form button {
   padding: 16px;
   border-radius: 5px;
   border: 1px solid hsl(246, 25%, 77%);
   font-weight: 600;
 }
-main .signup form input {
+.signup form input {
   width: 100%;
-  background: url(images/icon-error.svg) no-repeat;
-  background-position: calc(100% - 10px);
 }
-main .signup form button {
+.signup form button {
   background-color: hsl(154, 59%, 51%);
   color: white;
   box-shadow: 0px -2px 5px -2px hsl(249, 10%, 26%) inset;
   border: none;
 }
-main .signup form .term {
+.signup form .term {
   text-align: center;
 }
-main .signup form .term p {
+.signup form .term p {
   font-size: 10px;
   color: hsl(246, 25%, 77%);
 }
-main .signup form .term p strong {
+.signup form .term p strong {
   color: rgba(0, 0, 0, 0.37);
 }/*# sourceMappingURL=style.css.map */
