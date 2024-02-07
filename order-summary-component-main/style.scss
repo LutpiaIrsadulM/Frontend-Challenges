@@ -25,7 +25,10 @@ body{
     width: 100%;
     min-width: 375;
     height: 100vh;
-    background-color: $Paleblue;
+    background: url(images/pattern-background-desktop.svg) no-repeat;
+    @media  screen and (max-width: 375px) {
+        background: url(images/pattern-background-mobile.svg) no-repeat;
+    }
     display: grid;
     place-items: center;
 }

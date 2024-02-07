@@ -17,9 +17,14 @@ body {
   width: 100%;
   min-width: 375;
   height: 100vh;
-  background-color: hsl(225, 100%, 94%);
+  background: url(images/pattern-background-desktop.svg) no-repeat;
   display: grid;
   place-items: center;
+}
+@media screen and (max-width: 375px) {
+  body {
+    background: url(images/pattern-background-mobile.svg) no-repeat;
+  }
 }
 
 .card {
